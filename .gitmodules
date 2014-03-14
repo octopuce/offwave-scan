@@ -1,0 +1,3 @@
+[submodule "offwave"]
+	path = offwave
+	url = https://github.com/octopuce/offwave
