@@ -2,18 +2,15 @@
 
 set_include_path ( ".:./offwave/lib:".get_include_path());
 if( !is_file(__DIR__."/config.php")){
-
     die("missing config.php file!");
 }
 
 include("config.php");
-
-
 function __autoload($className) {
         
         $ds = DIRECTORY_SEPARATOR;
-	    $className = strtr($className, '_', $ds);
-	        $paths = explode(PATH_SEPARATOR, get_include_path());
+    $className = strtr($className, '_', $ds);
+	$paths = explode(PATH_SEPARATOR, get_include_path());
 		    foreach($paths as $dir){
 			        $file = "{$dir}{$ds}{$className}.php";
 				        if (is_readable($file)){
@@ -30,11 +27,13 @@ $Scanner = new Offwave_Scanner();
 
 foreach( $pathList as $path ){
 
-	echo "$path\n";
 	$result = $Scanner->scan($path) ;
-	if( isset($result[$path]) && isset ($result[$path]["Spip"])){
-	echo $result[$path]["Spip"]["version"]."\n";
+	if( isset($result[$path]) && count ($result[$path])){
+	    echo $path." : ".print_r($result[$path],1)."\n";
+	}else{
+	    echo "$path : unknown\n";	
 	}
+
 
 
 
