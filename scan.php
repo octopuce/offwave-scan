@@ -21,7 +21,7 @@ function __autoload($className) {
     throw new Exception("Sorry, {$className} is nowhere to be found in ".get_include_path());
 }
 
-$Scanner = new Offwave_Scanner();
+$Scanner = new Offwave_Scanner(array("agents_directories" => array("Cms","Forums")));
 
 foreach ($pathList as $path) {
 
