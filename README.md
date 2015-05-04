@@ -3,13 +3,13 @@ This is a very basic tool for using the Offwave scanner
 Install
 =======
 
-0. Clone project in your directory of choice
+# Clone project in your directory of choice
 
 ```bash
     git clone https://github.com/octopuce/offwave-scan ~/tmp/offwave-scan
 ```
 
-1. Install the offwave library dependancy with git
+#  Install the offwave library dependancy with git
 
 ```bash
     cd ~/tmp/offwave-scan
@@ -17,7 +17,7 @@ Install
 	git submodule update
 ```
 
-2. Add the path to check in config.php, one array line per path to check
+# Add the path to check in config.php, one array line per path to check
 
 ```bash
    cp config.php.default config.php
@@ -31,7 +31,7 @@ run the `generator.sh` script and answer the questions:
 * minimum depth for the scan? (ex: 0)
 * maximum depth for the scan? (ex: 3)
 
-3. Launch `scan.php` :
+# Launch `scan.php` :
 
 ```php
 php scan.php
