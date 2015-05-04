@@ -5,17 +5,24 @@ Install
 
 0. Clone project in your directory of choice
 
+```bash
     git clone https://github.com/octopuce/offwave-scan ~/tmp/offwave-scan
+```
 
 1. Install the offwave library dependancy with git
 
+```bash
     cd ~/tmp/offwave-scan
 	git submodule init
 	git submodule update
+```
 
 2. Add the path to check in config.php, one array line per path to check
+
+```bash
    cp config.php.default config.php
    find /var/www -type d -not -iname "\.*" -type d -maxdepth 2 -mindepth 1 -exec echo "\"{}\"," >> config.php \;
+```
 
 OR
 
