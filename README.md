@@ -21,7 +21,7 @@ git submodule update
 
 ```bash
 cp config.php.sample config.php
-find /var/www -type d -maxdepth 3 -mindepth 1 -exec echo "\"{}\"," >> config.php \;
+find /var/www -maxdepth 3 -mindepth 1 -type d -exec echo "\"{}\"," >> config.php \;
 ```
 
 OR
