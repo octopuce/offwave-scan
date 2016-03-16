@@ -20,7 +20,7 @@ git submodule update
 # Add the path to check in config.php, one array line per path to check
 
 ```bash
-cp config.php.default config.php
+cp config.php.sample config.php
 find /var/www -type d -maxdepth 3 -mindepth 1 -exec echo "\"{}\"," >> config.php \;
 ```
 
